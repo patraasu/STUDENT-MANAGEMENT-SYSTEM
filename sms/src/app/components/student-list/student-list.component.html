@@ -1,0 +1,36 @@
+
+<body>
+<div class="main">
+<h1 class="text-center">STUDENTS LIST</h1>
+<button type="button" class="btn btn-primary" (click)="router.navigate(['/addstudent']);">Add Student</button>
+
+
+<table class="table ">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Parent's Name </th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">Phone Number</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of this.students ;let i =index" >
+      <td>{{student.firstName}}</td>
+      <td>{{student.lastName}}</td>
+      <td>{{student.dob}}</td>
+      <td>{{student.parentsName}}</td>
+      <td>{{student.address}}</td>
+      <td>{{student.city}}</td>
+      <td>{{student.phone}}</td>
+    </tr>
+    <tr>
+    
+  </tbody>
+</table>
+</div>
+</body>
